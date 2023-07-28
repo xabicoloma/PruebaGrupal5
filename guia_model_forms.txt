@@ -1,0 +1,50 @@
+Elabore una pequeña guía que sintetice los pasos necesarios para levantar un formulario desde Django
+con Forms y Models.
+
+En la aplicacion Django generada se debe de dirigir al archivo llamado models.py:
+1- Los modelos utilizan clases que basicamente representan una tabla de la base de datos, en el presente archivo se debera definir una clase que como funcion pase como parametro el objeto de la clase models de la siguiente forma: "models.Model". 
+
+2- Dentro de la funcion, se deberan crear variables las cuales representaran las columnas de la base de datos, una columna por cada linea.
+
+3- En cada variable creada se debera asignar como valor una funcion con el tipo de dato que se maneja en el campo donde se debe pasar como parametro las propiedades de este.
+
+Aqui un ejemplo:
+
+from django.db import models
+
+	class EjemploModelo(models.Model):
+    		nombre = models.CharField(max_length=200)
+    		email = models.EmailField(max_length=200)
+
+    		def __str__(self):
+        		return self.nombre
+
+4- El método __str__ es opcional, pero es útil ya que define cómo se mostrará el objeto en el panel de administración de Django.
+
+Teniendo el modelo creado ahora debemos crear los formularios, estos se pueden basar en los modelos ya creados. Debera dirigirse al archivo llamado forms.py:
+1- Los formularios utilizan clases para representar cada formulario, el nombre de la clase deberá llevar el nombre del formulario a crear, si se va a crear un formulario basandose en uno de los modelos creados se debera pasar como parametro en la función el objeto de la clase forms de la siguiente forma: "forms.ModelForm" de lo contrario, si el formulario no esta basado en una clase se puede utilizar "forms.Form".
+
+2- Dentro de la funcion se deberán definir los campos a utilizar dentro de este. Si se está usando ModelForm, se debe incluir una subclase Meta en la clase de formulario con un atributo model que apunte al modelo lo cual servirá para deinir los campos automaticamente, de lo contrario es necesario definir los campos del formulario de manera manual.
+
+Un ejemplo de un modelForm:
+
+from django import forms
+from .models import Post
+
+	class PostForm(forms.ModelForm):
+    		class Meta:
+        		model = Post
+        		fields = ['titulo', 'contenido', 'autor']
+
+
+Un ejemplo de un Form:
+
+from django import forms
+
+	class ContactForm(forms.Form):
+    		nombre = forms.CharField(max_length=100)
+    		email = forms.EmailField()
+    		mensaje = forms.CharField(widget=forms.Textarea)
+
+
+Con modelos y formularios creados ya se pueden utilizar en una vista.

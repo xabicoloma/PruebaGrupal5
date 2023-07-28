@@ -1,0 +1,9 @@
+{% extends 'home/layout/base.html' %}
+{% block main %}
+    <h1>Proveedor Contactanos</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{formulario.as_p}}
+        <button type= "submit"> Enviar </button>
+    </form>
+{% endblock main %} 

@@ -1,0 +1,30 @@
+{% extends 'home/layout/base.html' %}
+{% block main %}
+<div class="grid">
+    <h2 class="card-title mt-4">Mostrando usuarios</h2>
+    {% for user in lista_usuario %}
+    <div class="card mb-4 mt-5" id="card1">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img 
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxLDsbU94RA3B4A3dA3lkOVobdVm3i4-zlEw&usqp=CAU"
+                alt="usuario"
+                class="img-fluid rounded-start" />
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Datos del Usuario</h5>
+                    <p class="card-text"><td>{{ user.nombre }}</td></p>
+                    <p class="card-text"><td>{{ user.apellido }}</td></p>
+                    <p class="card-text"><td>{{ user.rut }}</td></p> 
+                    <p class="card-text"><td>{{ user.email }}</td></p> 
+                    <p class="card-text">
+                        <small class="text-muted"><td>{{ user.fecha_registro }}</td></small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock main %} 

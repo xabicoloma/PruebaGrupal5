@@ -1,0 +1,9 @@
+{% extends 'home/layout/base.html' %}
+{% block main %}
+    <h1>Crear Cuenta</h1>
+    <form method="POST">
+    {% csrf_token %}
+    {{form.as_p }}
+    <input type= "submit" value="Crear Cuenta"> Enviar </input>
+    </form>
+{% endblock main %}

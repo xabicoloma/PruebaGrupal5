@@ -1,0 +1,56 @@
+{% extends 'home/layout/base.html' %}
+{% block main %}
+<head>
+    <!-- Agrega aquí las etiquetas meta, los enlaces a CSS y otros elementos del head -->
+    <style>
+      /* Estilos para las tarjetas con tono pastel */
+    .card-pastel {
+        background-color: #f5e6e6; /* Cambia el color de fondo a un tono pastel */
+        color: #555; /* Cambia el color del texto a un tono oscuro para que sea legible */
+        border: none; /* Quita el borde de la tarjeta para hacerla más suave */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega una sombra para dar profundidad */
+    }
+      /* Estilos para el texto del footer */
+    .footer-text {
+        color: #fff; /* Cambia el color del texto del footer a blanco */
+    }
+      /* Estilos para el texto del footer */
+        .footer-text {
+            color: #fff; /* Cambia el color del texto del footer a blanco */
+            text-align: center; /* Alinea el texto al centro */
+            width: 100%; /* Establece el ancho del texto al 100% */
+            margin: 0; /* Elimina el margen alrededor del texto */
+            padding: 10px 0; /* Agrega un relleno vertical de 10px y 0 de relleno horizontal */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+    <div class="row">
+        <div class="col-sm-4">
+        <!-- Contenido de la columna izquierda -->
+        <!-- ... -->
+        </div>
+        <div class="col-sm-8">
+        <!-- Testimonio 1 -->
+        <div class="card card-pastel mt-3">
+            <div class="card-body">
+            <h5 class="card-title">¡Una experiencia increíble en "Te lo vendo"!</h5>
+            <p class="card-text">¡Wow, simplemente wow! Mi primera compra en "Te lo vendo" fue una experiencia fantástica. La asesoría de moda en línea fue acertada, y estoy enamorada de cada prenda que compré. ¡Es como si hubieran leído mi mente y me presentaran exactamente lo que estaba buscando!</p>
+            <p class="card-text"><small>Title description, Dic 7, 2022</small></p>
+            </div>
+        </div>
+        <!-- Testimonio 2 -->
+        <div class="card card-pastel mt-3">
+            <div class="card-body">
+            <h5 class="card-title">¡Amor a primera compra en "Te lo vendo"!</h5>
+            <p class="card-text">¡Estoy encantado con mi compra en "Te lo vendo"! La asesoría de moda en línea fue excepcional, me ayudaron a encontrar exactamente lo que buscaba y descubrí algunas prendas que se adaptaban perfectamente a mi estilo. ¡El equipo de servicio al cliente fue amable y atento en todo momento!</p>
+            <p class="card-text"><small>Title description, May 2, 2023</small></p>
+            </div>
+        </div>
+        <!-- Puedes agregar más testimonios o contenido aquí usando el mismo formato de tarjeta -->
+        </div>
+    </div>
+    </div>
+</body>
+{% endblock main %}

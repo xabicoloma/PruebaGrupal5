@@ -1,0 +1,23 @@
+Identifiquen claramente las diferencias entre los métodos GET y POST.
+
+Se trata de dos metodos de solicitud (request) que se utilizan para comunicarse con un servidor y enviar datos desde un cliente como un navegador web, a un servidor web. La diferencia entre ambos es el comportamiento que tienen al manejar los datos:
+
+1. Funciones del método:
+   - GET: Este método se utiliza principalmente para recuperar información del servidor. Es un método seguro y consistente lo que significa que hacer la misma solicitud GET varias veces produce el mismo resultado.
+   - POST: Este método se utiliza para enviar datos para ser procesados a un recurso específico. No es ni seguro ni consistente en sus resultados, ya que hacer la misma solicitud POST varias veces puede tener diferentes resultados.
+
+2. Longitud de datos:
+   - GET: Hay una limitación en la cantidad de datos que pueden ser enviados debido a la restricción en la longitud de la URL, que suele ser de alrededor de 2000 caracteres (depende del navegador).
+   - POST: No hay limitación en la longitud de los datos que se pueden enviar ya que los datos se transmiten en el cuerpo de la solicitud.
+
+3. Transferencia de datos:
+   - GET: Los datos enviados por el cliente al servidor se incluyen en la URL de la solicitud y son visibles. Esto puede ser una limitación si se trata de datos sensibles.
+   - POST: Los datos enviados por el cliente al servidor se incluyen en el cuerpo de la solicitud y no son visibles en la URL, lo que proporciona una capa de seguridad.
+
+4. Impacto en la caché del navegador:
+   - GET: Las solicitudes GET pueden ser almacenadas en caché y también pueden permanecer en el historial del navegador.
+   - POST: Las solicitudes POST no se pueden almacenar en caché y no permanecen en el historial del navegador.
+
+5. Seguridad de la información:
+   - GET: Debido a que los datos son visibles en la URL, el método GET no es adecuado para enviar información delicada, como contraseñas.
+   - POST: Dado que los datos no son visibles en la URL, el método POST es más adecuado para enviar información delicada.

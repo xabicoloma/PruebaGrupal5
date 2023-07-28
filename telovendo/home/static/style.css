@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.nav{
+    color: black;
+}
+
+body{
+    background-color:rgb(213, 227, 241);
+}
+header {
+    min-height: 10vh;
+}
+main {
+    min-height: 80vh;
+}
+footer{
+    min-height: 10vh;
+}
+
+#telovendo{
+    font-family: sans-serif; 
+    color:rgb(68, 197, 197); 
+    font-size: 25px;
+    text-shadow: 6px 6px 7px rgb(127, 245, 227); 
+    margin: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 5px;
+    text-align: center;
+}
+
+#card1{
+    display:block;
+    margin:auto;
+    margin-top: 25px;
+    border-radius: 15px ;
+    width: 500px; 
+    box-shadow: 3px 3px 5px #3c70cb;
+    background-color:rgb(162, 196, 231);        
+}
